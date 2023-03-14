@@ -18,8 +18,8 @@ namespace tools {
     //%block="paste screen"
     export function paste() {
         basic.clearScreen();
-        for (let x = 0;x < 4; x++) {
-            led.plot(x, 0);
+        for (let x = 0;x < 5; x++) {
+            if(list[x]) {led.plot(x, 0);}
         }
     }
 }
