@@ -45,6 +45,9 @@ namespace tools {
             if(rot = 1){
             for (let i = 0; i < 26; i++) { if (subList[i]) { led.plot(Math.floor(i / 5),i % 5);}}
             }
+            if (rot = 2) {
+                for (let i = 25; i > -1; i--) { if (subList[i]) { led.plot(i % 5, Math.floor(i / 5)); } }
+            }
         }
     export function flip() {
 
