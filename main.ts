@@ -42,7 +42,7 @@ namespace tools {
             basic.clearScreen();
             for (let y = 0; y < 5; y++)
                 for (let x = 0; x < 5; x++) {
-                    if (list[x + 5 * y]) { led.plot(y, x); }
+                    if (subList[x + 5 * y]) { led.plot(y, x); }
                 }
         }
     }
