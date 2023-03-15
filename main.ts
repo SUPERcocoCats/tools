@@ -1,3 +1,15 @@
+enum flipOptions {
+    //% block="vertically"
+    vertically,
+    //% block="horizontally"
+    horizontally
+}
+
+
+
+
+
+
 namespace tools {
     let list = 
         [true, true, true, true,true,
@@ -55,9 +67,10 @@ namespace tools {
                 for (let l = 0; l < 26; l++) { if (subList[l]) { led.plot(Math.floor((-l + 24) / 5), l % 5); } }
             }
         }
+
     //%blockid=toolsflip
-    //%block="Flip"
-    export function flip() {
+    //%block="Flip $dir"
+    export function flip(dir: flipOptions) {
         subList = [led.point(0, 0), led.point(1, 0), led.point(2, 0), led.point(3, 0), led.point(4, 0),
         led.point(0, 1), led.point(1, 1), led.point(2, 1), led.point(3, 1), led.point(4, 1),
         led.point(0, 2), led.point(1, 2), led.point(2, 2), led.point(3, 2), led.point(4, 2),
@@ -65,7 +78,7 @@ namespace tools {
         led.point(0, 4), led.point(1, 4), led.point(2, 4), led.point(3, 4), led.point(4, 4)];
     
         basic.clearScreen();
-        for (let i = 0; i < 26; i++) { if (subList[i]) { led.plot((-i + 24) % 5, Math.floor(i / 5)); } }
+        for (let m = 0; m < 26; m++) { if (subList[m]) { led.plot((-m + 24) % 5, Math.floor(m / 5)); } }
     }
 
 
