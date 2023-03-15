@@ -43,20 +43,11 @@ namespace tools {
             //paste rotated
             basic.clearScreen();
 
-            if(rot = 1) {
-            for (let y2 = 0; y2 < 5; y2++)
-                for (let x2 = 0; x2 < 5; x2++) {
-                    if (subList[x2 + 5 * y2]) { led.plot(y2, x2); }
-                }
-            } else if(rot = 2)  {
-                for (let y3 = 0; y3 < 5; y3++)
-                    for (let x3 = 0; x3 < 5; x3++) {
-                        if (subList[x3 + 5 * y3]) { //led.plot(x3, y3); 
-                        }
-                    }
-            }
-
-
+            for (let y3 = 0; y3 < 5; y3++)
+                for (let x3 = 0; x3 < 5; x3++) {
+                    if (subList[x3 + 5 * y3]) { led.plot(x3, y3); }}
+            if (rot = 2) {tools.Rotate(1)}
+            if (rot = 3) {tools.Rotate(2)}
         }
     export function flip() {
 
