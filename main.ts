@@ -1,4 +1,4 @@
-enum flipOptions {
+enum flipdir {
     //% block="vertically"
     vertically,
     //% block="horizontally"
@@ -70,7 +70,7 @@ namespace tools {
 
     //%blockid=toolsflip
     //%block="Flip $dir"
-    export function flip(dir: flipOptions) {
+    export function flip(dir: flipdir) {
         subList = [led.point(0, 0), led.point(1, 0), led.point(2, 0), led.point(3, 0), led.point(4, 0),
         led.point(0, 1), led.point(1, 1), led.point(2, 1), led.point(3, 1), led.point(4, 1),
         led.point(0, 2), led.point(1, 2), led.point(2, 2), led.point(3, 2), led.point(4, 2),
