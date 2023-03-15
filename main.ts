@@ -42,16 +42,11 @@ namespace tools {
             
             //paste rotated
             basic.clearScreen();
-            if(rot = 1) {
-                for (let y2 = 0; y2 < 5; y2++)
-                    for (let x2 = 0; x2 < 5; x2++) {
-                        if (subList[x2 + 5 * y2]) { led.plot(y2, x2); }} 
-            } else if (rot = 2){
-                for (let y2 = 4; y2 < -1; y2--)
-                    for (let x2 = 4; x2 > -1; x2--) {
-                        if (subList[x2 + 5 * y2]) { led.plot(-x2, -y2); }
-                    }
+            for (let y2 = 0; y2 < 5; y2++)
+                for (let x2 = 0; x2 < 5; x2++) {
+                    if (subList[x2 + 5 * y2]) { led.plot(y2, x2); }
                 }
+                
 
 
         }
