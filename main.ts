@@ -55,7 +55,8 @@ namespace tools {
                 for (let l = 0; l < 26; l++) { if (subList[l]) { led.plot(Math.floor((-l + 24) / 5), l % 5); } }
             }
         }
-    //%blockid="toolsflip"
+    //%blockid=toolsflip
+    //%block="Flip"
     export function flip() {
         subList = [led.point(0, 0), led.point(1, 0), led.point(2, 0), led.point(3, 0), led.point(4, 0),
         led.point(0, 1), led.point(1, 1), led.point(2, 1), led.point(3, 1), led.point(4, 1),
