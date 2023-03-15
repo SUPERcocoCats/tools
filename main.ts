@@ -41,14 +41,17 @@ namespace tools {
             led.point(0, 4), led.point(1, 4), led.point(2, 4), led.point(3, 4), led.point(4, 4)];
             
             //paste rotated
-            basic.clearScreen();
-            if(rot == 1){
+
+            if (rot == 1) {
+                basic.clearScreen();
                 for (let i = 0; i < 26; i++) { if (subList[i]) { led.plot(Math.floor(i / 5), (-i + 24) % 5);}}
             }
-            if (rot == 2){
+            if (rot == 2) {
+                basic.clearScreen();
                 for (let i = 0; i < 26; i++) { if (subList[(-i + 24)]) { led.plot(i % 5, Math.floor(i / 5)); } }
             }
-            if (rot == 3){
+            if (rot == 3) {
+                basic.clearScreen();
                 for (let i = 0; i < 26; i++) { if (subList[i]) { led.plot(Math.floor((-i + 24) / 5), i % 5); } }
             }
         }
