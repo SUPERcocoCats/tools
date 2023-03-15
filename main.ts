@@ -81,7 +81,9 @@ namespace tools {
         if (dir = flipdir.vertically) {
         for (let m = 0; m < 26; m++) { if (subList[m]) { led.plot((-m + 24) % 5, Math.floor(m / 5)); } }
         }
-        
+        if (dir = flipdir.horizontally) {
+            for (let m = 0; m < 26; m++) { if (subList[m]) { led.plot(m % 5, Math.floor(m / 5)); } }
+        }
     }
     
 
