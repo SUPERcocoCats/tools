@@ -19,7 +19,7 @@ namespace tools {
     export function paste() {
         basic.clearScreen();
         for (let x = 0;x < 5; x++) {
-            if(true) {led.plot(x, 0);}
+            if(list[x]) {led.plot(x, 0);}
         }
     }
 }
