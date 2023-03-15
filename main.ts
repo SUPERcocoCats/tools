@@ -1,8 +1,8 @@
 enum flipdir {
-    //% block="2"
-    vertically,
-    //% block="1"
-    horizontally
+    //% block="vertically"
+    one,
+    //% block="horizontally"
+    two
 }
 
 
@@ -78,11 +78,11 @@ namespace tools {
         led.point(0, 4), led.point(1, 4), led.point(2, 4), led.point(3, 4), led.point(4, 4)];
 
         basic.clearScreen();
-        if (dir = 1) {
+        if (dir = flipdir.one) {
         for (let m = 0; m < 26; m++) { if (subList[m]) { led.plot((-m + 24) % 5, Math.floor(m / 5)); } }
         }
-        if (dir = 2) {
-            for (let m = 0; m < 26; m++) { if (subList[m]) { led.plot((-m + 24) % 5, Math.floor(m / 5)); } }
+        if (dir = flipdir.two) {
+            for (let m = 0; m < 26; m++) { if (subList[m]) { led.plot(m % 5, Math.floor((-m + 24) / 5)); } }
         }
     }
     
