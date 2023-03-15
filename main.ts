@@ -42,7 +42,7 @@ namespace tools {
             
             //paste rotated
             basic.clearScreen();
-        if(rot == 1) {
+        if(rot = 1) {
             for (let y3 = 0; y3 < 5; y3++)
                 for (let x3 = 0; x3 < 5; x3++) {
                     if (subList[x3 + 5 * y3]) { led.plot(x3, y3); }}
