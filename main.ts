@@ -29,8 +29,10 @@ namespace tools {
             true, true, true, true, true,
             true, true, true, true, true];
         //%blockid=toolsrot
-        //%block="Rotate"
-        export function Rotate() {
+        //%block="Rotate $rot degrees"
+        //%rot.min=0 rot.max=360 
+        //%rot.fieldOptions.precision=90
+        export function Rotate(rot: number) {
             //copy the screen
             subList = [led.point(0, 0), led.point(1, 0), led.point(2, 0), led.point(3, 0), led.point(4, 0),
             led.point(0, 1), led.point(1, 1), led.point(2, 1), led.point(3, 1), led.point(4, 1),
@@ -40,10 +42,14 @@ namespace tools {
             
             //paste rotated
             basic.clearScreen();
-            for (let y = 0; y < 5; y++)
-                for (let x = 0; x < 5; x++) {
-                    if (subList[x + 5 * y]) { led.plot(y, x); }
+            for (let y2 = 0; y2 < 5; y2++)
+                for (let x2 = 0; x2 < 5; x2++) {
+                    if (subList[x2 + 5 * y2]) { led.plot(y2, x2); }
                 }
         }
+    export function flip() {
+
     }
 
+
+    }
