@@ -42,7 +42,7 @@ namespace tools {
             
             //paste rotated
             basic.clearScreen();
-        for (let i = 0;i < 26; i++) {led.plot(i % 4,Math.floor(i/5));}
+        for (let i = 0;i < 26; i++) {led.plot(i % 5,Math.floor(i/5));}
         }
     export function flip() {
 
