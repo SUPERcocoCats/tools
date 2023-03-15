@@ -30,8 +30,8 @@ namespace tools {
             true, true, true, true, true];
         //%blockid=toolsrot
         //%block="Rotate $rot degrees"
-        //%rot.min=0 rot.max=360 
-        //%rot.fieldOptions.precision=90
+        //%rot.min=0 rot.max=4
+        //%rot.fieldOptions.precision=1
         export function Rotate(rot: number) {
             //copy the screen
             subList = [led.point(0, 0), led.point(1, 0), led.point(2, 0), led.point(3, 0), led.point(4, 0),
@@ -42,14 +42,14 @@ namespace tools {
             
             //paste rotated
             basic.clearScreen();
-            if(rot = 90) {
+            if(rot = 1) {
                 for (let y2 = 0; y2 < 5; y2++)
                     for (let x2 = 0; x2 < 5; x2++) {
                         if (subList[x2 + 5 * y2]) { led.plot(y2, x2); }} 
-            } else if (rot = 180){
-                for (let y2 = 0; y2 < 5; y2++)
-                    for (let x2 = 0; x2 < 5; x2++) {
-                        if (subList[x2 + 5 * y2]) { led.plot(-y2, x2); }
+            } else if (rot = 2){
+                for (let y2 = 4; y2 < -1; y2--)
+                    for (let x2 = 4; x2 > -1; x2--) {
+                        if (subList[x2 + 5 * y2]) { led.plot(-x2, -y2); }
                     }
                 }
 
