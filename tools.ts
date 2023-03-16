@@ -4,7 +4,7 @@ enum flipdir {
     //% block="horizontally"
     horizontally
 }
-enum rodDir {
+enum rotDir {
     //% block="90°"
     "c",
     //% block="180°"
@@ -49,7 +49,7 @@ namespace tools {
     //%block="Rotate $rot degrees"
     //%rot.min=0 rot.max=4
     //%rot.fieldOptions.precision=1
-    export function Rotate(rot: rodDir) {
+    export function Rotate(rot: rotDir) {
         //copy the screen
         subList = [led.point(0, 0), led.point(1, 0), led.point(2, 0), led.point(3, 0), led.point(4, 0),
         led.point(0, 1), led.point(1, 1), led.point(2, 1), led.point(3, 1), led.point(4, 1),
@@ -59,15 +59,15 @@ namespace tools {
 
         //paste rotated
 
-        if (rot == rodDir.c) {
+        if (rot == rotDir.c) {
             basic.clearScreen();
             for (let j = 0; j < 26; j++) { if (subList[j]) { led.plot(Math.floor(j / 5), (-j + 24) % 5); } }
         }
-        if (rot == rodDir.b) {
+        if (rot == rotDir.b) {
             basic.clearScreen();
             for (let k = 0; k < 26; k++) { if (subList[(-k + 24)]) { led.plot(k % 5, Math.floor(k / 5)); } }
         }
-        if (rot == rodDir.a) {
+        if (rot == rotDir.a) {
             basic.clearScreen();
             for (let l = 0; l < 26; l++) { if (subList[l]) { led.plot(Math.floor((-l + 24) / 5), l % 5); } }
         }
