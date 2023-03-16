@@ -4,12 +4,6 @@ enum flipdir {
     //% block="horizontally"
     horizontally
 }
-
-
-
-
-
-
 namespace tools {
     let list = 
         [true, true, true, true,true,
@@ -83,7 +77,7 @@ namespace tools {
         }
         
         if (dir == flipdir.horizontally) {
-            for (let m = 0; m < 26; m++) { if (subList[m]) { led.plot((-m + 24) % 5, Math.floor(m / 5)); } }
+            for (let n = 0; n < 26; n++) { if (subList[n]) { led.plot((-n + 24) % 5, Math.floor(n / 5)); } }
         }
         
     }
