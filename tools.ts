@@ -6,11 +6,11 @@ enum flipdir {
 }
 enum rotDir {
     //% block="90°"
-    c,
+    one,
     //% block="180°"
-    b,
+    two,
     //% block="270°"
-    a
+    three
 }
 //%weight=100 color=#dec804 icon=
 namespace tools {
@@ -36,7 +36,6 @@ namespace tools {
     }
     /**
     *paste the coyped screen
-    *defaults to a filled screen
     */
     //%blockid=toolsPaste
     //%block="paste screen"
@@ -71,15 +70,15 @@ namespace tools {
         led.point(0, 4), led.point(1, 4), led.point(2, 4), led.point(3, 4), led.point(4, 4)];
 
         //paste rotated
-        if (rot == rotDir.a) {
+        if (rot == rotDir.three) {
             basic.clearScreen();
             for (let j = 0; j < 26; j++) { if (subList[j]) { led.plot(Math.floor(j / 5), (-j + 24) % 5); } }
         }
-        if (rot == rotDir.b) {
+        if (rot == rotDir.two) {
             basic.clearScreen();
             for (let k = 0; k < 26; k++) { if (subList[(-k + 24)]) { led.plot(k % 5, Math.floor(k / 5)); } }
         }
-        if (rot == rotDir.c) {
+        if (rot == rotDir.one) {
             basic.clearScreen();
             for (let l = 0; l < 26; l++) { if (subList[l]) { led.plot(Math.floor((-l + 24) / 5), l % 5); } }
         }
