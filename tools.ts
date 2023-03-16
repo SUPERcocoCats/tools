@@ -59,7 +59,7 @@ namespace tools {
 
         //paste rotated
 
-        if (rot == rotDir.c) {
+        if (rot == rotDir.a) {
             basic.clearScreen();
             for (let j = 0; j < 26; j++) { if (subList[j]) { led.plot(Math.floor(j / 5), (-j + 24) % 5); } }
         }
@@ -67,7 +67,7 @@ namespace tools {
             basic.clearScreen();
             for (let k = 0; k < 26; k++) { if (subList[(-k + 24)]) { led.plot(k % 5, Math.floor(k / 5)); } }
         }
-        if (rot == rotDir.a) {
+        if (rot == rotDir.c) {
             basic.clearScreen();
             for (let l = 0; l < 26; l++) { if (subList[l]) { led.plot(Math.floor((-l + 24) / 5), l % 5); } }
         }
