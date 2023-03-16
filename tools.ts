@@ -6,11 +6,11 @@ enum flipdir {
 }
 enum rotDir {
     //% block="90°"
-    "c",
+    c,
     //% block="180°"
-    "b",
+    b,
     //% block="270°"
-    "a"
+    a
 }
 //%weight=100 color=#dec804 icon=
 namespace tools {
