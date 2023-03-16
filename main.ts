@@ -78,11 +78,11 @@ namespace tools {
         led.point(0, 4), led.point(1, 4), led.point(2, 4), led.point(3, 4), led.point(4, 4)];
 
         basic.clearScreen();
-        if (dir = flipdir.vertically) {
+        if (dir == flipdir.vertically) {
             for (let m = 0; m < 26; m++) { if (subList[m]) { led.plot(m % 5, Math.floor(m / 5)); } }
         }
         
-        if (dir = flipdir.horizontally) {
+        if (dir == flipdir.horizontally) {
             for (let m = 0; m < 26; m++) { if (subList[m]) { led.plot(m % 5, Math.floor((-m + 24) / 5)); } }
         }
         
