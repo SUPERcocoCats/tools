@@ -4,7 +4,7 @@ enum flipdir {
     //% block="horizontally"
     horizontally
 }
-//%weight=100 color=#dec804 icon=/f013
+//%weight=100 color=#dec804 icon=/uf0ad
 namespace tools {
     let list =
         [true, true, true, true, true,
